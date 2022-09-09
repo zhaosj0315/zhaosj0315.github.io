@@ -20,28 +20,32 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="zhaosj">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="neo4j安装部署Neo4j安装部署本机安装（Linux系统）1. 安装包获取安装版本为neo4j-enterprise-3.5.26，获取安装包的http请求中，可修改edition参数控制版本名称，如edition&#x3D;enterprise为企业版，可修改release参数控制版本号，如release&#x3D;3.5.26限制了neo4j的版本号。 2. 解压安装neo4j1tar -xvf neo4j-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="blog.md">
+<meta property="og:url" content="http://example.com/2022/09/09/blog-md/index.html">
 <meta property="og:site_name" content="zhaosj">
+<meta property="og:description" content="neo4j安装部署Neo4j安装部署本机安装（Linux系统）1. 安装包获取安装版本为neo4j-enterprise-3.5.26，获取安装包的http请求中，可修改edition参数控制版本名称，如edition&#x3D;enterprise为企业版，可修改release参数控制版本号，如release&#x3D;3.5.26限制了neo4j的版本号。 2. 解压安装neo4j1tar -xvf neo4j-">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-09T14:50:50.000Z">
+<meta property="article:modified_time" content="2022-09-09T14:51:38.502Z">
 <meta property="article:author" content="zhaosj">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2022/09/09/blog-md/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>zhaosj</title>
+  <title>blog.md | zhaosj</title>
   
 
 
@@ -140,9 +144,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -158,10 +163,9 @@
       <meta itemprop="name" content="zhaosj">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/09/09/blog-md/" class="post-title-link" itemprop="url">blog.md</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          blog.md
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -185,7 +189,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="neo4j安装部署"><a href="#neo4j安装部署" class="headerlink" title="neo4j安装部署"></a>neo4j安装部署</h1><h2 id="Neo4j安装部署"><a href="#Neo4j安装部署" class="headerlink" title="Neo4j安装部署"></a><strong>Neo4j安装部署</strong></h2><h3 id="本机安装（Linux系统）"><a href="#本机安装（Linux系统）" class="headerlink" title="本机安装（Linux系统）"></a><strong>本机安装（Linux系统）</strong></h3><h3 id="1-安装包获取"><a href="#1-安装包获取" class="headerlink" title="1. 安装包获取"></a><strong>1. 安装包获取</strong></h3><p>安装版本为<a target="_blank" rel="noopener" href="https://neo4j.com/download-thanks/?edition=enterprise&release=3.5.26&flavour=unix&_ga=2.260936525.1552296070.1623231494-1199330813.1623231494#">neo4j-enterprise-3.5.26</a>，获取安装包的http请求中，可修改<code>edition</code>参数控制版本名称，如<code>edition=enterprise</code>为企业版，可修改<code>release</code>参数控制版本号，如<code>release=3.5.26</code>限制了neo4j的版本号。</p>
+        <h1 id="neo4j安装部署"><a href="#neo4j安装部署" class="headerlink" title="neo4j安装部署"></a>neo4j安装部署</h1><h2 id="Neo4j安装部署"><a href="#Neo4j安装部署" class="headerlink" title="Neo4j安装部署"></a><strong>Neo4j安装部署</strong></h2><h3 id="本机安装（Linux系统）"><a href="#本机安装（Linux系统）" class="headerlink" title="本机安装（Linux系统）"></a><strong>本机安装（Linux系统）</strong></h3><h3 id="1-安装包获取"><a href="#1-安装包获取" class="headerlink" title="1. 安装包获取"></a><strong>1. 安装包获取</strong></h3><p>安装版本为<a target="_blank" rel="noopener" href="https://neo4j.com/download-thanks/?edition=enterprise&release=3.5.26&flavour=unix&_ga=2.260936525.1552296070.1623231494-1199330813.1623231494#">neo4j-enterprise-3.5.26</a>，获取安装包的http请求中，可修改<code>edition</code>参数控制版本名称，如<code>edition=enterprise</code>为企业版，可修改<code>release</code>参数控制版本号，如<code>release=3.5.26</code>限制了neo4j的版本号。</p>
 <h3 id="2-解压安装neo4j"><a href="#2-解压安装neo4j" class="headerlink" title="2. 解压安装neo4j"></a><strong>2. 解压安装neo4j</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf neo4j-enterprise-3.5.26-unix.tar</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-修改neo4j-conf文件"><a href="#3-修改neo4j-conf文件" class="headerlink" title="3. 修改neo4j.conf文件"></a><strong>3. 修改neo4j.conf文件</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修改为（公开访问接口）：</span><br><span class="line">dbms.connector.bolt.address=0.0.0.0:7687</span><br><span class="line">dbms.connector.http.address=0.0.0.0:7474</span><br></pre></td></tr></table></figure>
@@ -222,149 +226,30 @@
 </blockquote>
 <p>需要注意的是，一定要确定docker镜像或容器加载过程中能够影响到的物理机目录有哪些，有时候可能不是docker默认根目录的空间不足所造成。如我们发现的问题中，docker默认根目录为<code>/home/docker_home</code>，有3.5T的可使用空间，未存在空间不足现象；而有另一个目录<code>/var/lib/containerd</code>，且挂载于<code>/root</code>下，该目录的空间几乎没有剩余，于是将<code>/root</code>目录下的空间清理出一部分，成功加载了docker镜像。</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/09/first-md/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhaosj">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhaosj">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/09/09/first-md/" class="post-title-link" itemprop="url">first.md</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-09-09 22:02:27 / 修改时间：22:03:18" itemprop="dateCreated datePublished" datetime="2022-09-09T22:02:27+08:00">2022-09-09</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="blog"><a href="#blog" class="headerlink" title="blog"></a>blog</h1>
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/09/09/first-md/" rel="prev" title="first.md">
+      <i class="fa fa-chevron-left"></i> first.md
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/09/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhaosj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhaosj">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/09/09/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-09-09 21:46:57" itemprop="dateCreated datePublished" datetime="2022-09-09T21:46:57+08:00">2022-09-09</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -417,6 +302,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#neo4j%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2"><span class="nav-number">1.</span> <span class="nav-text">neo4j安装部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Neo4j%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2"><span class="nav-number">1.1.</span> <span class="nav-text">Neo4j安装部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E6%9C%BA%E5%AE%89%E8%A3%85%EF%BC%88Linux%E7%B3%BB%E7%BB%9F%EF%BC%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">本机安装（Linux系统）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85%E5%8C%85%E8%8E%B7%E5%8F%96"><span class="nav-number">1.1.2.</span> <span class="nav-text">1. 安装包获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%A7%A3%E5%8E%8B%E5%AE%89%E8%A3%85neo4j"><span class="nav-number">1.1.3.</span> <span class="nav-text">2. 解压安装neo4j</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BF%AE%E6%94%B9neo4j-conf%E6%96%87%E4%BB%B6"><span class="nav-number">1.1.4.</span> <span class="nav-text">3. 修改neo4j.conf文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%BC%80%E5%90%AF%E9%98%B2%E7%81%AB%E5%A2%99%E7%9B%B8%E5%BA%94%E7%AB%AF%E5%8F%A3"><span class="nav-number">1.1.5.</span> <span class="nav-text">4. 开启防火墙相应端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%90%AF%E5%8A%A8neo4j%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.1.6.</span> <span class="nav-text">5. 启动neo4j服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-GDS%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.7.</span> <span class="nav-text">6. GDS安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#neo4j-docker%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2"><span class="nav-number">1.1.8.</span> <span class="nav-text">neo4j docker环境部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85%E5%8C%85%E5%87%86%E5%A4%87"><span class="nav-number">1.1.9.</span> <span class="nav-text">1. 安装包准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Dockerfile"><span class="nav-number">1.1.10.</span> <span class="nav-text">2.Dockerfile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Dockerfile%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F"><span class="nav-number">1.1.11.</span> <span class="nav-text">3. Dockerfile构建镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%90%AF%E5%8A%A8-neo4j-docker%E5%AE%B9%E5%99%A8"><span class="nav-number">1.1.12.</span> <span class="nav-text">4. 启动 neo4j docker容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B8%A9%E5%9D%91"><span class="nav-number">1.1.13.</span> <span class="nav-text">踩坑</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
