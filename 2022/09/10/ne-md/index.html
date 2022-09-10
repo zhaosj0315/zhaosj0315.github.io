@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="git快速入门 https:&#x2F;&#x2F;img.shields.io&#x2F;npm&#x2F;l&#x2F;whistle.svg?style&#x3D;flat-square  账号注册 安装 git 配置 git 配置 ssh 创建 github 新仓库 创建本地仓库并上传到 github 仓库 下载 github 仓库 拉取远程更新 许可证  账号注册首先你需要 注册 一个 github 账号，如图所示，设置账号密码和邮箱，其它都可以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ne.md">
+<meta property="og:url" content="http://example.com/2022/09/10/ne-md/index.html">
+<meta property="og:site_name" content="tes">
+<meta property="og:description" content="git快速入门 https:&#x2F;&#x2F;img.shields.io&#x2F;npm&#x2F;l&#x2F;whistle.svg?style&#x3D;flat-square  账号注册 安装 git 配置 git 配置 ssh 创建 github 新仓库 创建本地仓库并上传到 github 仓库 下载 github 仓库 拉取远程更新 许可证  账号注册首先你需要 注册 一个 github 账号，如图所示，设置账号密码和邮箱，其它都可以">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.shields.io/npm/l/whistle.svg?style=flat-square">
+<meta property="og:image" content="https://xue.cn/books/github-quick-start/imgs/register.png">
+<meta property="og:image" content="https://xue.cn/books/github-quick-start/imgs/keygen.png">
+<meta property="og:image" content="https://xue.cn/books/github-quick-start/imgs/addsshkey.png">
+<meta property="article:published_time" content="2022-09-10T02:11:57.000Z">
+<meta property="article:modified_time" content="2022-09-10T02:12:31.170Z">
+<meta property="article:author" content="zhaosj3150@gmail.com">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.shields.io/npm/l/whistle.svg?style=flat-square">
+
+<link rel="canonical" href="http://example.com/2022/09/10/ne-md/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>ne.md | tes</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">tes</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">zhaosj</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/10/ne-md/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhaosj3150@gmail.com">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tes">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ne.md
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-09-10 10:11:57 / 修改时间：10:12:31" itemprop="dateCreated datePublished" datetime="2022-09-10T10:11:57+08:00">2022-09-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="git快速入门"><a href="#git快速入门" class="headerlink" title="git快速入门"></a>git快速入门</h1><p><img src="https://img.shields.io/npm/l/whistle.svg?style=flat-square" alt="https://img.shields.io/npm/l/whistle.svg?style=flat-square"></p>
+<p><a target="_blank" rel="noopener" href="https://img.shields.io/npm/l/whistle.svg?style=flat-square">https://img.shields.io/npm/l/whistle.svg?style=flat-square</a></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://xue.cn/hub/reader?bookId=134&path=github-quick-start/README.ipynb&anchor=%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C">账号注册</a></li>
+<li><a target="_blank" rel="noopener" href="https://xue.cn/hub/reader?bookId=134&path=github-quick-start/README.ipynb&anchor=%E5%AE%89%E8%A3%85-git">安装 git</a></li>
+<li><a target="_blank" rel="noopener" href="https://xue.cn/hub/reader?bookId=134&path=github-quick-start/README.ipynb&anchor=%E9%85%8D%E7%BD%AE-git">配置 git</a></li>
+<li><a target="_blank" rel="noopener" href="https://xue.cn/hub/reader?bookId=134&path=github-quick-start/README.ipynb&anchor=%E9%85%8D%E7%BD%AE-ssh">配置 ssh</a></li>
+<li><a target="_blank" rel="noopener" href="https://xue.cn/hub/reader?bookId=134&path=github-quick-start/README.ipynb&anchor=%E5%88%9B%E5%BB%BA-github-%E6%96%B0%E4%BB%93%E5%BA%93">创建 github 新仓库</a></li>
+<li><a target="_blank" rel="noopener" href="https://xue.cn/hub/reader?bookId=134&path=github-quick-start/README.ipynb&anchor=%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E5%B9%B6%E4%B8%8A%E4%BC%A0%E5%88%B0-github-%E4%BB%93%E5%BA%93">创建本地仓库并上传到 github 仓库</a></li>
+<li><a target="_blank" rel="noopener" href="https://xue.cn/hub/reader?bookId=134&path=github-quick-start/README.ipynb&anchor=%E4%B8%8B%E8%BD%BD-github-%E4%BB%93%E5%BA%93">下载 github 仓库</a></li>
+<li><a target="_blank" rel="noopener" href="https://xue.cn/hub/reader?bookId=134&path=github-quick-start/README.ipynb&anchor=%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E6%9B%B4%E6%96%B0">拉取远程更新</a></li>
+<li><a target="_blank" rel="noopener" href="https://xue.cn/hub/reader?bookId=134&path=github-quick-start/README.ipynb&anchor=%E8%AE%B8%E5%8F%AF%E8%AF%81">许可证</a></li>
+</ul>
+<h2 id="账号注册"><a href="#账号注册" class="headerlink" title="账号注册"></a><strong>账号注册</strong></h2><p>首先你需要</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/join">注册</a></p>
+<p>一个 github 账号，如图所示，设置账号密码和邮箱，其它都可以使用默认设置。</p>
+<p><img src="https://xue.cn/books/github-quick-start/imgs/register.png" alt="https://xue.cn/books/github-quick-start/imgs/register.png"></p>
+<p><a target="_blank" rel="noopener" href="https://xue.cn/books/github-quick-start/imgs/register.png">https://xue.cn/books/github-quick-start/imgs/register.png</a></p>
+<h2 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a><strong>安装 git</strong></h2><p>安装 homebrew</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /usr/<span class="built_in">bin</span>/ruby -e <span class="string">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>安装 git</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install git</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置-git"><a href="#配置-git" class="headerlink" title="配置 git"></a><strong>配置 git</strong></h2><p>配置一下全局用户名和全局邮箱</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`$ git config --<span class="keyword">global</span> user.name <span class="string">&quot;halo&quot;</span>$ git config --<span class="keyword">global</span> user.email <span class="string">&quot;haloislet@gmail.com&quot;</span>``$ git config --<span class="keyword">global</span> --<span class="built_in">list</span> <span class="comment"># 查看全局配置`</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="配置-ssh"><a href="#配置-ssh" class="headerlink" title="配置 ssh"></a><strong>配置 ssh</strong></h2><p>git 连接 github 的时候会用到 ssh 。我们需要配置一下 ssh。</p>
+<p>使用 ssh-keygen 命令来生成私钥和公钥。</p>
+<p><code>$ ssh-keygen</code></p>
+<p><img src="https://xue.cn/books/github-quick-start/imgs/keygen.png" alt="https://xue.cn/books/github-quick-start/imgs/keygen.png"></p>
+<p><a target="_blank" rel="noopener" href="https://xue.cn/books/github-quick-start/imgs/keygen.png">https://xue.cn/books/github-quick-start/imgs/keygen.png</a></p>
+<p>将公钥配置到 github 的</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/settings/ssh/new">SSH keys</a></p>
+<p>中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p>将输入的内容复制到 Key 中,Title 可以自定义一个名字。</p>
+<p><img src="https://xue.cn/books/github-quick-start/imgs/addsshkey.png" alt="https://xue.cn/books/github-quick-start/imgs/addsshkey.png"></p>
+<p><a target="_blank" rel="noopener" href="https://xue.cn/books/github-quick-start/imgs/addsshkey.png">https://xue.cn/books/github-quick-start/imgs/addsshkey.png</a></p>
+<p>附：ssh-keygen 有两个常用的参数 -t 和 -C ，其中 -t 参数用来指定加密的算法默认值为 rsa 。-C 参数为注释,默认为当前用户名@本地主机名。</p>
+<h2 id="创建-github-新仓库"><a href="#创建-github-新仓库" class="headerlink" title="创建 github 新仓库"></a><strong>创建 github 新仓库</strong></h2><p>在<a target="_blank" rel="noopener" href="https://github.com/new">创建仓库页面中</a>输入自定义的仓库名然后点击 Create repository 就可以了。</p>
+<h2 id="创建本地仓库并上传到-github-仓库"><a href="#创建本地仓库并上传到-github-仓库" class="headerlink" title="创建本地仓库并上传到 github 仓库"></a><strong>创建本地仓库并上传到 github 仓库</strong></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init                                   <span class="comment"># 创建本地仓库$ touch README.md                 # 创建 README 文件$ git add .                                # 将文件添加到暂存区,暂存区中保存的是将要提交的文件$ git commit -m &quot;first commit&quot;   # 提交暂存区的文件变化到本地仓库$ git remote add origin git@github.com:haloislet/github-quick-start.git       # 添加一个远程仓库并将名字标记为 origin$ git push origin master             # 将本地仓库的内容提交到名为 origin 的远程仓库的 master 分支`</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="下载-github-仓库"><a href="#下载-github-仓库" class="headerlink" title="下载 github 仓库"></a><strong>下载 github 仓库</strong></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git@github.com:haloislet/github-quick-start.git</span><br></pre></td></tr></table></figure>
+
+<h2 id="拉取远程更新"><a href="#拉取远程更新" class="headerlink" title="拉取远程更新"></a><strong>拉取远程更新</strong></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
+
+<h2 id="许可证"><a href="#许可证" class="headerlink" title="许可证"></a><strong>许可证</strong></h2><p>The MIT License (MIT)</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/09/10/google-md/" rel="prev" title="google.md">
+      <i class="fa fa-chevron-left"></i> google.md
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="nav-number">1.</span> <span class="nav-text">git快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C"><span class="nav-number">1.1.</span> <span class="nav-text">账号注册</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-git"><span class="nav-number">1.2.</span> <span class="nav-text">安装 git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-git"><span class="nav-number">1.3.</span> <span class="nav-text">配置 git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-ssh"><span class="nav-number">1.4.</span> <span class="nav-text">配置 ssh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-github-%E6%96%B0%E4%BB%93%E5%BA%93"><span class="nav-number">1.5.</span> <span class="nav-text">创建 github 新仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E5%B9%B6%E4%B8%8A%E4%BC%A0%E5%88%B0-github-%E4%BB%93%E5%BA%93"><span class="nav-number">1.6.</span> <span class="nav-text">创建本地仓库并上传到 github 仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-github-%E4%BB%93%E5%BA%93"><span class="nav-number">1.7.</span> <span class="nav-text">下载 github 仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E6%9B%B4%E6%96%B0"><span class="nav-number">1.8.</span> <span class="nav-text">拉取远程更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%B8%E5%8F%AF%E8%AF%81"><span class="nav-number">1.9.</span> <span class="nav-text">许可证</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhaosj3150@gmail.com</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhaosj3150@gmail.com</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
